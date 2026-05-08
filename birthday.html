@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Anudi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#172554,#1e3a8a);
+    color:white;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* SECTION */
+
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    text-align:center;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#ff4d6d,#7c3aed);
+    position:relative;
+}
+
+.hero h1{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    opacity:0.9;
+    max-width:500px;
+}
+
+/* FLOATING HEARTS */
+
+.hearts{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    top:0;
+    left:0;
+}
+
+.hearts span{
+    position:absolute;
+    bottom:-50px;
+    color:rgba(255,255,255,0.3);
+    animation:float 10s linear infinite;
+    font-size:20px;
+}
+
+.hearts span:nth-child(1){ left:10%; animation-duration:8s;}
+.hearts span:nth-child(2){ left:25%; animation-duration:12s;}
+.hearts span:nth-child(3){ left:50%; animation-duration:10s;}
+.hearts span:nth-child(4){ left:70%; animation-duration:7s;}
+.hearts span:nth-child(5){ left:90%; animation-duration:11s;}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+
+/* TITLES */
+
+.title{
+    font-size:36px;
+    margin-bottom:30px;
+    color:#ff4d6d;
+}
+
+/* PHOTO GRID */
+
+.photo-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    width:100%;
+    max-width:1100px;
+}
+
+.photo-grid img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+    border-radius:25px;
+    transition:0.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.photo-grid img:hover{
+    transform:scale(1.03);
+}
+
+/* CARD */
+
+.card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    padding:35px;
+    border-radius:25px;
+    max-width:500px;
+    width:100%;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 28px;
+    background:#ff4d6d;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.3s;
+    border:none;
+    cursor:pointer;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:#ff2d55;
+}
+
+/* GAME AREA */
+
+.game-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#heart-area{
+    width:320px;
+    height:320px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.06);
+    position:relative;
+    overflow:hidden;
+    margin-top:20px;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.game-heart{
+    position:absolute;
+    font-size:130px;
+    animation:pop 2s linear forwards;
+}
+
+@keyframes pop{
+    0%{
+        transform:scale(0);
+        opacity:1;
+    }
+    50%{
+        transform:scale(1.2);
+    }
+    100%{
+        transform:translateY(-120px);
+        opacity:0;
+    }
+}
+
+/* SMALL POPUP HEARTS */
+
+.popup-heart{
+    position:fixed;
+    color:#ff4d6d;
+    font-size:18px;
+    pointer-events:none;
+    animation:popup 4s linear forwards;
+    z-index:9999;
+    opacity:0.8;
+}
+
+@keyframes popup{
+
+    0%{
+        transform:translateY(0) scale(0.5);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120px) scale(1.4);
+        opacity:0;
+    }
+
+}
+
+/* FINAL PHOTO */
+
+.final-photo{
+    width:90%;
+    max-width:450px;
+    border-radius:30px;
+    margin-top:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .photo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .photo-grid img{
+        height:400px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .title{
+        font-size:28px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SECTION 1 -->
+
+<section class="hero">
+
+    <div class="hearts">
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+    </div>
+
+    <h1>Happy Birthday Anudi 💖</h1>
+
+    <p>
+        A small digital surprise made specially for you.
+    </p>
+
+</section>
+
+<!-- SECTION 2 -->
+
+<section>
+
+    <h2 class="title">Beautiful Cute Girl 📸</h2>
+
+    <div class="photo-grid">
+
+        <img src="img/1.jpeg" alt="">
+        <img src="img/3.jpeg" alt="">
+        <img src="img/2.jpeg" alt="">
+
+    </div>
+
+</section>
+
+<!-- SECTION 3 -->
+
+<section>
+
+    <h2 class="title">Your Gift 🎁</h2>
+
+    <div class="card">
+
+        <p>
+            I made something special for you.  
+            This little book is a memory and birthday gift.
+        </p>
+
+        <a href="book.pdf" download class="btn">
+            Download Your Gift
+        </a>
+
+    </div>
+
+</section>
+
+<!-- SECTION 4 -->
+
+<section>
+
+    <h2 class="title">Love & Fun Game ❤️</h2>
+
+    <div class="game-container">
+
+        <p>
+            Click the button and fill the screen with hearts.
+        </p>
+
+        <button class="btn" onclick="createHeart()">
+            Create Hearts
+        </button>
+
+        <div id="heart-area"></div>
+
+    </div>
+
+</section>
+
+<!-- SECTION 5 -->
+
+<section>
+
+    <h2 class="title">A Special Surprise For You 🎁</h2>
+
+    <div class="card">
+
+        <p>
+            Click the button below and enjoy the surprise 💖
+        </p>
+
+        <button class="btn" onclick="openSurprise()">
+            Click For Surprise ✨
+        </button>
+
+    </div>
+
+</section>
+
+<!-- SECTION 6 -->
+
+<section class="hero">
+
+    <h1>I Miss You Anudi 💖</h1>
+
+    <p>
+        Some people become memories,  
+        but special memories never disappear.
+    </p>
+
+    <img src="img/3.jpeg" class="final-photo">
+
+</section>
+
+<script>
+
+function createHeart(){
+
+    const area = document.getElementById("heart-area");
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("game-heart");
+
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * 280 + "px";
+    heart.style.top = Math.random() * 250 + "px";
+
+    area.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },2000);
+
+}
+
+/* AUTO FLOATING HEARTS */
+
+function floatingHearts(){
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("popup-heart");
+
+    heart.innerHTML = "💖";
+
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.top = window.innerHeight + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },4000);
+
+}
+
+setInterval(floatingHearts,700);
+
+/* OPEN SURPRISE VIDEO */
+
+function openSurprise(){
+
+    window.open(
+        "https://youtube.com/shorts/Bgel6O8C8Tk?si=4xPPANXLNrP55SV9",
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
